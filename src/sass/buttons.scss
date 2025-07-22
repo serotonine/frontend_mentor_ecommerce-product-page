@@ -37,3 +37,9 @@
 .btn-cta {
   cursor: pointer;
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .btn {
+    transition: none !important;
+  }
+}
