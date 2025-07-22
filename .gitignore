@@ -1,0 +1,16 @@
+# Config.
+package-lock.json
+/node_modules
+.DS_Store
+
+# Images.
+/images
+
+# trash.
+*.bak
+
+
+
+# Doc
+README-template.md
+/design

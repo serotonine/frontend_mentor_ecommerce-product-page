@@ -1,0 +1,51 @@
+@use "sass:list";
+
+:root{
+  /* Primary */
+  --color-orange: hsl(26, 100%, 55%);
+  --color-orange-light: hsl(25, 100%, 75%);
+  /* Neutral */
+  --color-blue-dark: hsl(220, 13%, 13%);
+  --color-blue-grayish-dark:hsl(219, 9%, 45%);
+  --color-blue-grayish:hsl(220, 14%, 75%);
+  --color-blue-grayish-light:hsl(223, 64%, 95%);
+  --color-white:hsl(0, 0%, 100%);
+  --color-black:hsl(0, 0%, 0%);
+  /* units */
+  --unit-breakpoint-desktop : 990px;
+  --unit-padding-mobile: 1.5rem;
+   --unit-padding-desktop: 6rem;
+  --unit-desktop-width:445px;
+ 
+}
+
+
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 100%;
+  font-weight:400;
+  font-style: normal;
+  font-variation-settings:"YOPQ" 300;
+  color: var(--color-blue-grayish-dark);
+}
+/* Titles */
+$heading-sizes-min: 2rem, 1.75rem, 1.5rem, 1.25rem, 1rem, 0.75rem;
+$heading-sizes-max: 2.5rem, 2rem, 1.75rem, 1.50rem, 1.24rem, 1rem;
+$margin-bottom: 1rem, 0.85rem, 0.75rem, 0.65rem, 0.5rem, 0.25rem;
+@for $i from 1 through 6 {
+  h#{$i} {
+    font-weight: 700;
+    font-size: list.nth($heading-sizes-min, $i); 
+    font-size:clamp(list.nth($heading-sizes-min, $i),5vw,list.nth($heading-sizes-max, $i));
+    margin-bottom: list.nth($margin-bottom, $i); 
+    @if $i != 6 {color: var(--color-black);}
+  }
+}
+
+/* Paragraphs */
+p{
+  line-height: 1.5;
+  margin-bottom: 0.75rem;
+}

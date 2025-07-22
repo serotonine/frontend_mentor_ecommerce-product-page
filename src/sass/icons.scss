@@ -1,0 +1,16 @@
+.icon {
+  transition: fill 0.2s;
+  &__cart,
+  &__burger {
+    fill: var(--color-blue-grayish-dark);
+    &:active {
+      fill: black;
+    }
+  }
+  &__delete {
+    fill:var(--color-blue-grayish);
+  &:active{
+    fill:var(--color-blue-grayish-dark)
+  }
+  }
+}

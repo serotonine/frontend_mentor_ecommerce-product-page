@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+    <title>Frontend Mentor | E-commerce product page</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <script type="module" src="/src/js/main.js"></script>
+  </head>
+
+  <body>
+    <header class="main-header">
+      <nav class="main-menu display-mobile">
+        <div class="close" id="main-menu-mobile-close">
+          <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg">
+            <path class="icon__close" id="path-icon-close"
+              d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"
+              fill-rule="evenodd" />
+          </svg>
+        </div>
+        <ul class="main-menu__menu no-list">
+          <li class="main-menu__menu-item">Collections</li>
+          <li class="main-menu__menu-item">Men</li>
+          <li class="main-menu__menu-item">Women</li>
+          <li class="main-menu__menu-item">About</li>
+          <li class="main-menu__menu-item">Contact</li>
+        </ul>
+      </nav>
+
+      <div class="header__container flex-center-space-between">
+        <section class="main-header__brand flex-centered-gap-1">
+          <div class="burger-container">
+            <svg id="icon-menu" width="16" height="15" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 12v3H0v-3h16Zm0-6v3H0V6h16Zm0-6v3H0V0h16Z" class="icon__burger" fill-rule="evenodd" />
+            </svg>
+          </div>
+          <div class="logo">
+            <img src="./images/logo.svg" alt="Sneaker logo">
+          </div>
+        </section>
+        <nav class="main-menu display-desktop flex-1">
+          <ul class="main-menu__menu no-list flex-centered-gap-1">
+            <li class="main-menu__menu-item">Collections</li>
+            <li class="main-menu__menu-item">Men</li>
+            <li class="main-menu__menu-item">Women</li>
+            <li class="main-menu__menu-item">About</li>
+            <li class="main-menu__menu-item">Contact</li>
+          </ul>
+        </nav>
+        <section class="secondary-menu flex-centered-gap-1">
+          <div class="secondary-menu__cta-cart">
+            <div class="secondary-menu__cta-cart-qty hidden"></div>
+            <div class="btn btn-rounded btn-cta"><img src="./images/icon-cart.svg" alt="Display basket"></div>
+          </div>
+          <div class="secondary-menu__cta-account btn-rounded">
+
+          </div>
+        </section>
+      </div>
+    </header>
+    <main class="main">
+      <section id="cart" class="hidden">
+        <div class="cart__wrapper">
+          <header>
+            <h5>Cart</h5>
+          </header>
+          <main class="cart__empty align-center">
+            <p><b>Your cart is empty</b></p>
+          </main>
+          <main class="cart__filled hidden">
+            <div class="cart__description flex-center-space-between">
+              <div class="cart__description-thumbnail">
+                <img src="./images/image-product-1-thumbnail.jpg" alt="Fall Limited Sneakers">
+              </div>
+              <div class="cart__description-body">
+                <p class="mb-0">Fall Limited Edition Sneakers</p>
+                <p class="cart__description-price mb-0">
+                </p>
+              </div>
+              <div class="cart__description-delete">
+                <svg viewBox="0 0 448 512" width="14" height="16" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <path
+                    d="M32 464C32 490.5 53.5 512 80 512h288c26.5 0 48-21.5 48-48V128H32V464zM304 208C304 199.1 311.1 192 320 192s16 7.125 16 16v224c0 8.875-7.125 16-16 16s-16-7.125-16-16V208zM208 208C208 199.1 215.1 192 224 192s16 7.125 16 16v224c0 8.875-7.125 16-16 16s-16-7.125-16-16V208zM112 208C112 199.1 119.1 192 128 192s16 7.125 16 16v224C144 440.9 136.9 448 128 448s-16-7.125-16-16V208zM432 32H320l-11.58-23.16c-2.709-5.42-8.25-8.844-14.31-8.844H153.9c-6.061 0-11.6 3.424-14.31 8.844L128 32H16c-8.836 0-16 7.162-16 16V80c0 8.836 7.164 16 16 16h416c8.838 0 16-7.164 16-16V48C448 39.16 440.8 32 432 32z"
+                    class="icon__delete" id="cart-icon-delete" fill-rule="nonzero" />
+                </svg>
+              </div>
+            </div>
+            <div class="flex">
+              <button type="button" data-type="cart-cta" class="btn btn-large btn-orange btn-cta flex-1">
+                <span><b>Checkout</b></span>
+              </button>
+            </div>
+          </main>
+      </section>
+      <div class="main__container">
+        <section class="slider" id="slider">
+          <div class="slider__main">
+            <div class="slider__navigation slider__navigation-prev"><span>&#x276E;</span></div>
+            <div class="slider__navigation slider__navigation-next"><span>&#x276F;</span></div>
+            <div class="slider-container">
+              <img src="./images/image-product-1.jpg" alt="Fall Limited Edition Sneakers"
+                title="Fall Limited Edition Sneakers">
+              <img src="./images/image-product-2.jpg" alt="Fall Limited Edition Sneakers"
+                title="Fall Limited Edition Sneakers">
+              <img src="./images/image-product-3.jpg" alt="Fall Limited Edition Sneakers"
+                title="Fall Limited Edition Sneakers">
+              <img src="./images/image-product-4.jpg" alt="Fall Limited Edition Sneakers"
+                title="Fall Limited Edition Sneakers">
+            </div>
+          </div>
+          <div class="slider__thumbnails">
+            <figure class="thumbnail active"><img src="./images/image-product-1.jpg" alt="Fall Limited Edition Sneakers"
+                title="Fall Limited Edition Sneakers"></figure>
+            <figure class="thumbnail"><img src="./images/image-product-2.jpg" alt="Fall Limited Edition Sneakers"
+                title="Fall Limited Edition Sneakers"></figure>
+            <figure class="thumbnail"><img src="./images/image-product-3.jpg" alt="Fall Limited Edition Sneakers"
+                title="Fall Limited Edition Sneakers"></figure>
+            <figure class="thumbnail"><img src="./images/image-product-4.jpg" alt="Fall Limited Edition Sneakers"
+                title="Fall Limited Edition Sneakers"></figure>
+          </div>
+        </section>
+        <div class="content__container">
+          <section class="content product-description">
+            <h6 class="product-description__brand">Sneaker Company</h6>
+            <h1 class="product-description__title">
+              Fall Limited Edition Sneakers
+            </h1>
+            <p class="product-description__body">
+              These low-profile sneakers are your perfect casual wear companion. Featuring a
+              durable rubber outer sole, they’ll withstand everything the weather can offer.
+            </p>
+            <section class="product-description__prices flex-center-space-between">
+              <h3 class="product-description__prices-final mb-0"><span>$125.00</span></h3>
+              <div class="product-description__prices-discount flex-1"><span class="btn btn-dark">50%</span></div>
+              <div class="product-description__prices-original"><b>$250.00</b></div>
+            </section>
+            <section class="product-description__add-to-cart flex">
+              <button type="button" data-type="cart-qty" class="btn btn-large btn-grey flex-center-space-between">
+                <span class="basket__minus"><img src="./images/icon-minus.svg" alt="minus"
+                    title="Retrieve quantity"></span>
+                <span class="basket"><b>0</b></span>
+                <span class="basket__plus"><img src="./images/icon-plus.svg" alt="plus" title="Add quantity"></span>
+              </button>
+              <button type="button" class="basket__add btn btn-large btn-orange btn-cta flex-1">
+                <div class="flex-centered-gap-1 flex-space-center">
+                  <span><svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+                        fill="#000" fill-rule="nonzero" />
+                    </svg></span>
+                  <span><b>Add to cart</b></span>
+                </div>
+              </button>
+            </section>
+
+          </section>
+        
+      </div>
+    </main>
+    <footer class="main-footer">
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="#">Serotonine</a>.
+      </div>
+    </footer>
+
+
+
+
+  </body>
+
+</html>

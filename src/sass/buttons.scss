@@ -1,0 +1,39 @@
+.btn {
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  text-align: center;
+  transition: all 0.3s;
+  -webkit-tap-highlight-color: transparent;
+
+  &-large {
+    border-radius: 0.75rem;
+    padding: 1.25rem;
+  }
+}
+
+.btn-rounded {
+  border-radius: 50%;
+}
+
+.btn-grey {
+  background-color: var(--color-blue-grayish-light);
+}
+
+.btn-dark {
+  background-color: var(--color-blue-dark);
+  color: var(--color-white);
+  font-weight: 700;
+}
+
+.btn-orange {
+  background-color: var(--color-orange);
+  color: var(--color-black);
+
+  &:active {
+    border: none;
+    background-color: var(--color-orange-light);
+  }
+}
+.btn-cta {
+  cursor: pointer;
+}
